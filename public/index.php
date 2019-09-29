@@ -355,7 +355,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
                                 <h5>Himanshu Gupta</h5>
-                                <span>Teacher</span>
+                                <span>Teacher- Maths (9th - 10th)</span>
                                 <p>B. Tech - IIT Kharagpur <br> M. Tech - IIT Rourkee</p>
                                 <div class="social-info">
                                     <a href="https://www.facebook.com/profile.php?id=100006145363939"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -373,7 +373,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
                                 <h5>Priyanshu Garg</h5>
-                                <span>Teacher</span>
+                                <span>Teacher- Maths (11th - 12th)</span>
                                 <p>Ph.D.(Maths)- IIT Delhi</p>
                                 <div class="social-info">
                                     <a href="https://www.facebook.com/priyanshu.garg.56"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -391,11 +391,130 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
                                 <h5>Shubhanshu Shukla</h5>
-                                <span>Teacher</span>
+                                <span>Teacher- Physics (11th - 12th)</span>
                                 <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
                                 <div class="social-info">
                                     <a href="https://www.facebook.com/shubhanshu.shukla.71"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <a href="https://www.instagram.com/shubhanshu29/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/sanskarGoyal.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Sanskar Goyal</h5>
+                                <span>Teacher- Chemistry (11th - 12th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/sanskarg9"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/sanskarr.goyal/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/rohit.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Rohit Jain</h5>
+                                <span>Teacher- Biology(11th - 12th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/xRohitJ"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/the.rohitjain/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/ashish.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Ashish Singh</h5>
+                                <span>Teacher- Science(9th - 10th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/profile.php?id=100005505693053"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/singh_ashish26/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/mridul.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Ashish Singh</h5>
+                                <span>Teacher- Accounts(11th - 12th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/mridul.kumar.54379"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/m_ri_dul_999/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/harsh.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Harsh Mishra</h5>
+                                <span>Teacher- English(9th - 10th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/harsh.mishra.1654"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/harshm._/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/ritvik.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Harsh Mishra</h5>
+                                <span>Teacher- English(11th - 12th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/ritvik.aggarwal.52.34.ritz101"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/ritvik.agg/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="img/teachers/siddhant.jpg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Siddhant Ranjan Singh</h5>
+                                <span>Counsellor- All(9th - 12th)</span>
+                                <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
+                                <div class="social-info">
+                                    <a href="https://www.facebook.com/siddhantranjansingh"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/siddhantranjansingh/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -453,7 +572,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
             <h3>Register Now</h3>
             <p>For registration purposes the child should come in person with his/her ward to the admission office. For contact information check contact section above. Hurry Now, Time remaining for scholarship availing is.</p>
             <div class="register-countdown">
-                <div class="events-cd d-flex flex-wrap" data-countdown="2019/09/01"></div>
+                <div class="events-cd d-flex flex-wrap" data-countdown="2019/10/01"></div>
             </div>
         </div>
     </section>
