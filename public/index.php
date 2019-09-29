@@ -458,7 +458,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Ashish Singh</h5>
+                                <h5>Mridul Kumar</h5>
                                 <span>Teacher- Accounts(11th - 12th)</span>
                                 <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
                                 <div class="social-info">
@@ -492,7 +492,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                             </div>
                             <!-- Tutor Information -->
                             <div class="tutor-information text-center">
-                                <h5>Harsh Mishra</h5>
+                                <h5>Ritvik Aggarwal</h5>
                                 <span>Teacher- English(11th - 12th)</span>
                                 <p>B. Tech - IIT Madras <br> M. Tech - IIT Bombay</p>
                                 <div class="social-info">
