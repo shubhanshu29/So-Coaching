@@ -233,6 +233,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                 </div>
             </div>
 
+      
             <div class="row">
                 <!-- Single Popular Course -->
                 <div class="col-12 col-md-6 col-lg-4">
@@ -299,6 +300,37 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                 <!-- Single Popular Course -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-popular-course mb-100">
+                        <img src="img/courses/Science.jpg" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Science</h4>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">View Teachers</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">9th - 10th</a>
+                            </div>
+                            <p>We have teachers who can instruct students in subject-specific lessons. They create lesson plans; evaluate student performances; and teach using lectures, technology and hands-on learning experiences.</p>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>
+                            <div class="course-fee h-100">
+                                <a href="#" class="free">Difficult</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100">
                         <img src="img/courses/physics.jpg" alt="">
                         <!-- Course Content -->
                         <div class="course-content">
@@ -306,7 +338,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                             <div class="meta d-flex align-items-center">
                                 <a href="#">View Teachers</a>
                                 <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-                                <a href="#">9th - 12th</a>
+                                <a href="#">11th - 12th</a>
                             </div>
                             <p>We have teachers who can teach children this subject according to their needs and wants (competition or academics).</p>
                         </div>
@@ -321,8 +353,160 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                                 </div>
                             </div>
                             <div class="course-fee h-100">
-                                <a href="#">Difficult</a>
+                                <a href="#" class="free">Difficult</a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100">
+                        <img src="img/courses/chemistry.jpg" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Chemisty</h4>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">View Teachers</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">11th - 12th</a>
+                            </div>
+                            <p>We have highly qualifies Chemistry teachers who can not only teach but also  supervise laboratory activities for students.</p>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>
+                            <div class="course-fee h-100">
+                                <a href="#">Easy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100">
+                        <img src="img/courses/biology.jpg" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Biology</h4>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">View Teachers</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">11th - 12th</a>
+                            </div>
+                            <p>We have teachers who develop engaging curricula including lab experiments and other scientific investigations; they also present lessons and evaluate student performance.</p>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>
+                            <div class="course-fee h-100">
+                                <a href="#" class="free">Difficult</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100">
+                        <img src="img/courses/economics.jpg" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Economics</h4>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">View Teachers</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">11th - 12th</a>
+                            </div>
+                            <p>We have highly qualified economics teachers those spend a substantial amount of time reading and planning lessons based on curriculum content and student level</p>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>
+                            <div class="course-fee h-100">
+                                <a href="#">Easy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Popular Course -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100">
+                        <img src="img/courses/accounting.jpg" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Accounting</h4>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">View Teachers</a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#">11th - 12th</a>
+                            </div>
+                            <p>We have teachers who have masters on topics like financial accounting, principles of marketing, and operations management.</p>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>
+                            <div class="course-fee h-100">
+                                <a href="#" class="free">Difficult</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Single Popular Course -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100">
+                        <img src="img/courses/counselling.jpg" alt="">
+                        <!-- Course Content -->
+                        <div class="course-content">
+                            <h4>Counselling</h4>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#">View Counsellers</a>
+                                <a href="#"></a>
+                            </div>
+                            <p>We have Counsellers who provide support to students experiencing emotional difficulties by helping them to identify and work through their issues.</p>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>      
                         </div>
                     </div>
                 </div>
