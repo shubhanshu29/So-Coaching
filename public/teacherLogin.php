@@ -48,9 +48,10 @@ Type the above number:<br>
 <br><br>
 <!-- END CAPTCHA -->
 
-                <input type="submit" name="" value="Login"> 
-                <input type="submit" name="" value="Login as parent">
-                <input type="submit" name="" value="Login as student">
+                <input type="submit" name="" value="Login"> <h1><br>OR<br></h1>
+                <center><a href="parentLogin.php"><button type="button" style="background-color : #f44336; font-size: 30px; border-radius: 12px">Login as parent</button></a>
+                <br><br><a href="studentLogin.php"><button type="button" style="background-color : #f44336; font-size: 30px; border-radius: 12px">Login as student</button></a>
+                </center> 
              </form>
              <script type="text/javascript">
 

@@ -30,28 +30,28 @@
                 <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Password/pin</p>
                 <input type="Password" name="" placeholder="Enter password/pin">
                   <!-- START CAPTCHA -->
-<br>
-<div class="capbox">
+                <br>    
+                <div class="capbox">
 
-<div id="CaptchaDiv"></div>
+                    <div id="CaptchaDiv"></div>
 
-<div class="capbox-inner">
-Type the above number:<br>
+                        <div class="capbox-inner">Type the above number:<br>
 
-<input type="hidden" id="txtCaptcha">
-<input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+                            <input type="hidden" id="txtCaptcha">   
+                            <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
 
-</div>
-</div>
-<br><br>
-<!-- END CAPTCHA -->
+                        </div>
+                    </div>
+            <br><br>
+            <!-- END CAPTCHA -->
 
-                <input type="submit" name="" value="Login"> 
-                <input type="submit" name="" value="Login as student">
-                <input type="submit" name="" value="Login as teacher">
-             </form>
-             <script type="text/javascript">
+                <input type="submit" name="" value="Login"> <h1><br>OR<br></h1>
+                <center><a href="studentLogin.php"><button type="button" style="background-color : #f44336; font-size: 30px; border-radius: 12px">Login as student</button></a>
+                <br><br><a href="teacherLogin.php"><button type="button" style="background-color : #f44336; font-size: 30px; border-radius: 12px">Login as teacher</button></a>
+                </center>
+            </form>
 
+<script type="text/javascript">
 // Captcha Script
 
     function checkform(theform){
@@ -88,21 +88,21 @@ Type the above number:<br>
     if (str1 == str2){
     return true;
     }
-    else{
-    return false;
-    }
+        else{
+            return false;
+        }
     }
 
 // Remove the spaces from the entered and generated code
-    function removeSpaces(string){
-    return string.split(' ').join('');
-}
-</script>
+        function removeSpaces(string){
+        return string.split(' ').join('');
+        }
+        </script>
 
             
         
         </div>
-        
+
 
     </body>
 </html>
