@@ -138,9 +138,9 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                                     <div class="dropdown">
                                         <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Member Login</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="login.php">Login as Student</a>
-                                            <a class="dropdown-item" href="login.php">Login as Parent</a>
-                                            <a class="dropdown-item" href="login.php">Login as Teacher</a>
+                                            <a class="dropdown-item" href="studentLogin.php">Login as Student</a>
+                                            <a class="dropdown-item" href="parentLogin.php">Login as Parent</a>
+                                            <a class="dropdown-item" href="teacherLogin.php">Login as Teacher</a>
                                         </div>
                                     </div>
                                 </div>
