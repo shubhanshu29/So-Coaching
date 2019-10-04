@@ -1,54 +1,3 @@
-<?php
-
-/**
- * Laravel - A PHP Framework For Web Artisans
- *
- * @package  Laravel
- * @author   Taylor Otwell <taylor@laravel.com>
- */
-
-define('LARAVEL_START', microtime(true));
-
-/*
-|--------------------------------------------------------------------------
-| Register The Auto Loader
-|--------------------------------------------------------------------------
-|
-| Composer provides a convenient, automatically generated class loader for
-| our application. We just need to utilize it! We'll simply require it
-| into the script here so that we don't have to worry about manual
-| loading any of our classes later on. It feels great to relax.
-|
-*/
-
-require __DIR__.'/../vendor/autoload.php';
-
-/*
-|--------------------------------------------------------------------------
-| Turn On The Lights
-|--------------------------------------------------------------------------
-|
-| We need to illuminate PHP development, so let us turn on the lights.
-| This bootstraps the framework and gets it ready for use, then it
-| will load up this application so that we can run it and send
-| the responses back to the browser and delight our users.
-|
-*/
-
-$app = require_once __DIR__.'/../bootstrap/app.php';
-
-/*
-|--------------------------------------------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-|
-| Once we have the application, we can handle the incoming request
-| through the kernel, and send the associated response back to
-| the client's browser allowing them to enjoy the creative
-| and wonderful application we have prepared for them.
-|
-*/
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -213,7 +162,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                         <div class="icon">
                             <img src="img/core-img/earth.png" alt="">
                         </div>
-                        <h2><span class="counter">12</span></h2>
+                        <h2><span class="counter">20</span></h2>
                         <h5>Available Courses</h5>
                     </div>
                 </div>
@@ -756,7 +705,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
             <h3>Register Now</h3>
             <p>For registration purposes the child should come in person with his/her ward to the admission office. For contact information check contact section above. Hurry Now, Time remaining for scholarship availing is.</p>
             <div class="register-countdown">
-                <div class="events-cd d-flex flex-wrap" data-countdown="2019/10/01"></div>
+                <div class="events-cd d-flex flex-wrap" data-countdown="2019/11/01"></div>
             </div>
         </div>
     </section>
@@ -768,7 +717,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h3>Upcoming events</h3>
+                        <h3>Important Notifications</h3>
                     </div>
                 </div>
             </div>
@@ -779,33 +728,9 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                     <div class="single-upcoming-events mb-50">
                         <!-- Events Thumb -->
                         <div class="events-thumb">
-                            <img src="img/bg-img/e1.jpg" alt="">
-                            <h6 class="event-date">August 26</h6>
-                            <h4 class="event-title">Class 9th new physics batch</h4>
-                        </div>
-                        <!-- Date & Fee -->
-                        <div class="date-fee d-flex justify-content-between">
-                            <div class="date">
-                                <p><i class="fa fa-clock"></i> August 26 @ 9:00 am</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Upcoming Events -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-upcoming-events mb-50">
-                        <!-- Events Thumb -->
-                        <div class="events-thumb">
-                            <img src="img/bg-img/e2.jpg" alt="">
-                            <h6 class="event-date">August 7</h6>
-                            <h4 class="event-title">Class 10th new Maths Batch</h4>
-                        </div>
-                        <!-- Date & Fee -->
-                        <div class="date-fee d-flex justify-content-between">
-                            <div class="date">
-                                <p><i class="fa fa-clock"></i> August 7 @ 9:00 am</p>
-                            </div>
+                            <img src="img/bg-img/e3.jpg" alt="">
+                            <h6 class="event-date">October 26</h6>
+                            <h4 class="event-title">Class 11th new physics batch</h4>
                         </div>
                     </div>
                 </div>
@@ -816,14 +741,20 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
                         <!-- Events Thumb -->
                         <div class="events-thumb">
                             <img src="img/bg-img/e3.jpg" alt="">
-                            <h6 class="event-date">August 3</h6>
-                            <h4 class="event-title">Class 11th new Physics Batch</h4>
+                            <h6 class="event-date">October 7</h6>
+                            <h4 class="event-title">Class 10th new Maths Batch</h4>
                         </div>
-                        <!-- Date & Fee -->
-                        <div class="date-fee d-flex justify-content-between">
-                            <div class="date">
-                                <p><i class="fa fa-clock"></i> August 3 @ 9:00 am</p>
-                            </div>
+                    </div>
+                </div>
+
+                <!-- Single Upcoming Events -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-upcoming-events mb-50">
+                        <!-- Events Thumb -->
+                        <div class="events-thumb">
+                            <img src="img/bg-img/e3.jpg" alt="">
+                            <h6 class="event-date">October 3</h6>
+                            <h4 class="event-title">Class 11th new Physics Batch</h4>
                         </div>
                     </div>
                 </div>
