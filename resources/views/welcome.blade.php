@@ -12,7 +12,7 @@
     <title>So Coaching</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="<?= asset('img/core-img/favicon.ico') ?>">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -49,7 +49,9 @@
                 <!-- Menu -->
                 <nav class="classy-navbar justify-content-between" id="cleverNav">
 
-                    <a class="nav-brand" href="guestIndex.html"><img src="img/core-img/logo.png" alt=""></a>
+                    <a class="nav-brand" href="#">
+                        <img src="<?= asset('img/core-img/logo.png') ?>">
+                    </a>
 
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -66,11 +68,11 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="index.php">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><a href="#about">About Us</a></li>
                                 <li><a href="#courses">Courses</a></li>
                                 <li><a href="#instructor">Instructors</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -87,14 +89,14 @@
                                     <div class="dropdown">
                                         <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Member Login</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="studentLogin.php">Login as Student</a>
-                                            <a class="dropdown-item" href="parentLogin.php">Login as Parent</a>
-                                            <a class="dropdown-item" href="teacherLogin.php">Login as Teacher</a>
+                                            <a class="dropdown-item" href="/studentLogin">Login as Student</a>
+                                            <a class="dropdown-item" href="/parentLogin">Login as Parent</a>
+                                            <a class="dropdown-item" href="/teacherLogin">Login as Teacher</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="userthumb">
-                                    <img src="img/core-img/guest.png" alt="">
+                                    <img src="<?= asset('img/core-img/guest.png') ?>">
                                 </div>
                             </div>
 
@@ -752,16 +754,17 @@
                     <div class="single-upcoming-events mb-50">
                         <!-- Events Thumb -->
                         <div class="events-thumb">
-                            <img src="img/bg-img/e3.jpg" alt="">
-                            <h6 class="event-date">October 3</h6>
-                            <h4 class="event-title">Class 11th new Physics Batch</h4>
+                            <img src="img/bg-img/arro2.jpg" alt="">
+                            <h6 class="event-date">More Notifications:</h6><br><br>
+                            <a href="/notifications"><h4 class="event-title">Click here to See all notifications</h4></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ##### Upcoming Events End ##### -->
+    
+    <!-- ##### Notificatios End ##### -->
 
 
     <!-- ##### Footer Area Start ##### -->

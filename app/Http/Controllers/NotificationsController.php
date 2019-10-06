@@ -14,8 +14,8 @@ class NotificationsController extends Controller
      */
     public function index()
     {
-        return Notification::all();
-        return view('notifications.index');
+        $notifications=Notification::all();
+        return view('notifications')->with('notifications',$notifications);
     }
 
     /**

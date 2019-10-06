@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Contacts: So Coaching</title>
+    <title>Notifications| So-Coaching</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -70,7 +70,7 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="/">Home</a></li>
-                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -106,111 +106,31 @@
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
+    <hr>
+    @extends('layouts.app')
 
-    <!-- ##### Google Maps ##### -->
-    <div class="map-area">
-        <center><div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=jaypee%20institute%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.utilitysavingexpert.com">Utility Saving Expert</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
-        </center>
-    </div>
-
-    <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Info -->
-                <div class="col-12 col-lg-6">
-                    <div class="contact--info mt-50 mb-100">
-                        <h4>Contact Info</h4>
-                        <ul class="contact-list">
-                            <li>
-                                <h6><i class="fa fa-clock-o" aria-hidden="true"></i> Business Hours</h6>
-                                <h6>9:00 AM - 5:00 PM</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa fa-phone" aria-hidden="true"></i> Number</h6>
-                                <h6>+91 8433466260</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa fa-envelope" aria-hidden="true"></i> Email</h6>
-                                <h6>admission@socoaching.com</h6>
-                            </li>
-                            <li>
-                                <h6><i class="fa fa-map-pin" aria-hidden="true"></i> Address</h6>
-                                <h6>Sector 62 , Noida, UP , India-201309</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="col-12 col-lg-6">
-                    <div class="contact-form">
-                        <h4>Get In Touch</h4>
-                        
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="text" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn clever-btn w-100">Post A Comment</button>
-                                </div>
+    @section('content')
+        <h1>Notifications</h1>
+        @if(count($notifications) >= 1)
+            @foreach($notifications as $notification)
+                <section class="contact-area">
+                    <div class="container">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact--info mt-50 mb-100">
+                                <h4>{{$notification->TeacherName}}</h4>
+                                <p>{{$notification->body}}</p>
+                                <p>Posted On:</p><small>{{$notification->created_at}}</small>    
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Contact Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
-        <!-- Top Footer Area -->
-        <div class="top-footer-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Footer Logo -->
-                        <div class="footer-logo">
-                            <a href="index.php"><img src="img/core-img/logo.png" alt=""></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>        
+            @endforeach
+        @else
+            <p>No new Notifications</p>
+        @endif    
+    @endsection
 
-        <!-- Bottom Footer Area -->
-        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
-                <a href="#"><span>Email:</span> admission@socoaching.com</a>
-            </div>
-            <!-- Follow Us -->
-            <div class="follow-us">
-                <span>Follow us</span>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </footer>
-    <!-- ##### Footer Area End ##### -->
-
-    <!-- ##### All Javascript Script ##### -->
+     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

@@ -15,5 +15,23 @@ Route::get('/', function () {
  
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+ 
+});
+
+Route::get('/studentLogin', function () {
+    return view('studentLogin');
+ 
+});
+Route::get('/teacherLogin', function () {
+    return view('teacherLogin');
+ 
+});
+Route::get('/parentLogin', function () {
+    return view('parentLogin');
+ 
+});
+
 
 Route::resource('notifications' , 'NotificationsController');
