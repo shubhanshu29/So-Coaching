@@ -107,11 +107,21 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <hr>
-    @extends('layouts.app')
 
+    @extends('layouts.app')
     @section('content')
-        <h1>Create Notifications</h1>
-   
+        <h1>Create Notification</h1><hr>
+        {!! Form::open(['action' => 'NotificationsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+            <div class="form-group">
+                {{Form::label('teachername', 'Teacher Name')}}
+                {{Form::text('teachername', '', ['class' => 'form-control', 'placeholder' => 'Teacher Name'])}}
+            </div>
+            <div class="form-group">
+                {{Form::label('body', 'Body')}}
+                {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            </div>
+            {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+        {!! Form::close() !!}
     @endsection
 
      <!-- ##### All Javascript Script ##### -->

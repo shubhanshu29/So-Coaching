@@ -25,8 +25,7 @@ class NotificationsController extends Controller
      */
     public function create()
     {
-        $notifications=Notification::orderBy('created_at','desc')->get();
-        return view('notifications.create')->with('notifications'.'$notifications');
+        return view('notifications.create');
     }
 
     /**
@@ -37,7 +36,16 @@ class NotificationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'teachername' => 'required',
+            'body' => 'required',
+        ]);
+        // Create Post
+        $notification = new Notification;
+        $notification->TeacherName = $request->input('teachername');
+        $notification->body = $request->input('body');
+        $notification->save();
+        return redirect('/notifications')->with('success', 'Notification Created');
     }
 
     /**
