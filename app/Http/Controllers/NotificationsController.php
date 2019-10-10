@@ -14,8 +14,8 @@ class NotificationsController extends Controller
      */
     public function index()
     {
-        $notifications=Notification::all();
-        return view('notifications')->with('notifications',$notifications);
+        $notifications=Notification::orderBy('created_at','desc')->get();
+        return view('notifications.index')->with('notifications',$notifications);
     }
 
     /**
@@ -25,7 +25,8 @@ class NotificationsController extends Controller
      */
     public function create()
     {
-        //
+        $notifications=Notification::orderBy('created_at','desc')->get();
+        return view('notifications.create')->with('notifications'.'$notifications');
     }
 
     /**
