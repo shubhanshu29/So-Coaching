@@ -85,11 +85,9 @@
                             <div class="login-state d-flex align-items-center">
                                 <div class="user-name mr-30">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Member Login</a>
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guest</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/studentLogin">Login as Student</a>
-                                            <a class="dropdown-item" href="/parentLogin">Login as Parent</a>
-                                            <a class="dropdown-item" href="/teacherLogin">Login as Teacher</a>
+                                            <a class="dropdown-item" href="/login">Login</a>
                                         </div>
                                     </div>
                                 </div>
@@ -141,9 +139,6 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-    <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
-    <script src="js/google-map/map-active.js"></script>
 </body>
 
 </html>

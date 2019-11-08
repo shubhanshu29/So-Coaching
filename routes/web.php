@@ -35,3 +35,9 @@ Route::get('/parentLogin', function () {
 
 
 Route::resource('notifications' , 'NotificationsController');
+Auth::routes();
+
+Route::get('teacher/home', 'HomeController@teacherHome')->name('teacher.home')->middleware('Admin');
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('Admin');
+Route::get('student/home', 'HomeController@studentHome')->name('student.home')->middleware('Admin');
+Route::get('parent/home', 'HomeController@parentHome')->name('parent.home')->middleware('Admin');

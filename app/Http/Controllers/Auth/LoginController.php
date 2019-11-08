@@ -36,4 +36,35 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function login(Request $request)
+    {   
+        $input = $request->all();
+   
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+   
+        if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        {
+            if (auth()->user()->userType == 0) {
+                return redirect()->route('admin.home');
+            }
+            else if(auth()->user()->userType == 1) {
+                return redirect()->route('student.home');
+            }
+            else if(auth()->user()->userType == 2) {
+                return redirect()->route('teacher.home');
+            }
+            else if(auth()->user()->userType == 3) {
+                return redirect()->route('parent.home');
+            }
+        }else{
+            return redirect()->route('login')
+                ->with('error','Email-Address And Password Are Wrong.');
+        }
+          
+    }
+
 }
