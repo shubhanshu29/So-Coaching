@@ -42,12 +42,12 @@
                         
 
                         <div class="form-group row">
-                            <label for="UserType" class="col-md-4 col-form-label text-md-right">{{ __('Type Of User') }}</label>
+                            <label for="userType" class="col-md-4 col-form-label text-md-right">{{ __('Type Of User') }}</label>
 
                             <div class="col-md-6">
-                                <input id="UserType" type="text" class="form-control @error('UserType') is-invalid @enderror" name="UserType" value="{{ old('UserType') }}" required autocomplete="UserType" autofocus>
+                                <input id="userType" type="text" class="form-control @error('userType') is-invalid @enderror" name="userType" value="{{ old('userType') }}" required autocomplete="userType" autofocus>
 
-                                @error('UserType')
+                                @error('userType')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -56,12 +56,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="Batch1" class="col-md-4 col-form-label text-md-right">{{ __('Batch 1') }}</label>
+                            <label for="batch1" class="col-md-4 col-form-label text-md-right">{{ __('Batch 1') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Batch1" type="text" class="form-control @error('Batch1') is-invalid @enderror" name="Batch1" value="{{ old('Batch1') }}" required autocomplete="Batch1" autofocus>
+                                <input id="batch1" type="text" class="form-control @error('batch1') is-invalid @enderror" name="batch1" value="{{ old('batch1') }}" required autocomplete="batch1" autofocus>
 
-                                @error('Batch1')
+                                @error('batch1')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -70,12 +70,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="Batch3" class="col-md-4 col-form-label text-md-right">{{ __('Batch 3') }}</label>
+                            <label for="batch3" class="col-md-4 col-form-label text-md-right">{{ __('Batch 3') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Batch3" type="text" class="form-control @error('Batch3') is-invalid @enderror" name="Batch3" value="{{ old('Batch3') }}" required autocomplete="Batch3" autofocus>
+                                <input id="batch3" type="text" class="form-control @error('batch3') is-invalid @enderror" name="batch3" value="{{ old('batch3') }}" required autocomplete="batch3" autofocus>
 
-                                @error('Batch3')
+                                @error('batch3')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -84,12 +84,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="Batch2" class="col-md-4 col-form-label text-md-right">{{ __('Batch 2') }}</label>
+                            <label for="batch2" class="col-md-4 col-form-label text-md-right">{{ __('Batch 2') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Batch2" type="text" class="form-control @error('Batch2') is-invalid @enderror" name="Batch2" value="{{ old('Batch2') }}" required autocomplete="Batch2" autofocus>
+                                <input id="batch2" type="text" class="form-control @error('batch2') is-invalid @enderror" name="batch2" value="{{ old('batch2') }}" required autocomplete="batch2" autofocus>
 
-                                @error('Batch2')
+                                @error('batch2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

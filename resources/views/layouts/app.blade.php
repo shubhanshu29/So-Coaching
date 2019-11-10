@@ -7,13 +7,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>So- Coaching</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="<?= asset('img/core-img/favicon.ico') ?>">
+    <title>So-Coaching</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    
+    <!-- Favicon -->
+    <link rel="icon" href="<?= asset('img/core-img/favicon.ico') ?>">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

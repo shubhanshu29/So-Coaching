@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -14,7 +15,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! Just one more step.<br> <a href="/MemberLogin">Click here to continue</a>
                 </div>
             </div>
         </div>

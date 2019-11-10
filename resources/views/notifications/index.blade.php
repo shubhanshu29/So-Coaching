@@ -20,10 +20,6 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
