@@ -167,19 +167,16 @@
 </div>
 
 @else
-        @if($errors->any())
-            <h4>{{$errors->first()}}</h4>
-        @endif
         <center>
-        <h1>Create Notification</h1><hr>
-        {!! Form::open(['action' => 'NotificationsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        <h1>Create Relationship</h1><hr>
+        {!! Form::open(['action' => 'RelationshipsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group" style="width:1000px">
-                {{Form::label('teachername', 'Teacher Name')}}
-                {{Form::text('teachername', '', ['class' => 'form-control', 'placeholder' => 'Teacher Name'])}}
+                {{Form::label('parent_id', 'Parent User ID:')}}
+                {{Form::text('parent_id', '', ['class' => 'form-control', 'placeholder' => 'Parent User ID'])}}
             </div>
             <div class="form-group" style="width:1000px">
-                {{Form::label('body', 'Body')}}
-                {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+                {{Form::label('student_id', 'Student User ID')}}
+                {{Form::text('student_id', '', [ 'class' => 'form-control', 'placeholder' => 'Student User ID'])}}
             </div>
             {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
         {!! Form::close() !!}

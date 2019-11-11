@@ -34,6 +34,11 @@ Route::get('/MemberLogin', function () {
     }
 });
 
+Route::get('/addRelation', function () {
+    return view('admin.addRelation');
+});
+
+Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');
 
 

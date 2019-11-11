@@ -59,6 +59,31 @@
 
                         <!-- Nav Start -->
                         <div class="classynav">
+                        @guest
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="login-state d-flex align-items-center">
+                                <div class="userthumb">
+                                    <img src="../img/core-img/guest.png" alt="">
+                                </div>
+                            </div>
+                            
+@elseif(auth()->user()->userType==0)
+<div class="classynav">
+                        
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
                                 <li><a href="/register">Register User</a></li>
@@ -84,12 +109,8 @@
                                             <a class="dropdown-item" href="/notifications/create">Create Notifications</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="userthumb">
-                                    <img src="<?= asset('img/core-img/guest.png') ?>">
-                                </div>
-                            </div>
-
+                                </div>    
+@endguest
                         </div>
                         <!-- Nav End -->
                     </div>
@@ -103,6 +124,46 @@
 @extends('layouts.app')
 
 @section('content')
+
+@guest
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Access  Denied</div>
+
+                <div class="card-body">
+                    It looks like you are not logged in to our website. <br>
+                    This feature can only be accessed by the Admin.
+                    <br> <a href="/login">Click here to login</a>
+                    <br>OR<br>
+                    <a href="/">Go to Home Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@elseif (auth()->user()->userType!=0)
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Access  Denied</div>
+
+                <div class="card-body">
+                    It looks like you are not logged in to our website as admin<br>
+                    This feature can only be accessed by the Admin.
+                    <br> <a href="/login">Click here to login</a>
+                    <br>OR<br>
+                    <a href="/memberLogin">Go to Home Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@else
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -234,6 +295,9 @@
         </div>
     </div>
 </div>
+@endguest
+
+
 <br><br><hr>
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">

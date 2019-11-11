@@ -36,7 +36,6 @@ class NotificationsController extends Controller
      */
     public function store(Request $request)
     {
-        if(auth()->user()->userType==0 || auth()->user()->userType==2){
         $this->validate($request, [
             'teachername' => 'required',
             'body' => 'required',
@@ -47,12 +46,8 @@ class NotificationsController extends Controller
         $notification->body = $request->input('body');
         $notification->user_id = auth()->user()->id;
         $notification->save();
-        return redirect()->route('notifications.index')->withSuccess(['Created Successfully!!']);
+        return redirect()->route('notifications.index')->withSuccess(['Created Successfully!!']);        
         
-        }
-        else{
-            return redirect()->route('notifications.create')->withError('Creation Failed');     
-        }
     }
 
     /**

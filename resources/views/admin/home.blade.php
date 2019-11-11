@@ -45,7 +45,7 @@
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
                                 <li><a href="/register">Register User</a></li>
-                                <li><a href="/contact">Create Relationships</a></li>
+                                <li><a href="/addRelation">Create Relationships</a></li>
                                 
                             </ul>
 
