@@ -78,16 +78,6 @@
 
                             <!-- Register / Login -->
                             <div class="login-state d-flex align-items-center">
-                                <div class="user-name mr-30">
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Member Login</a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/studentLogin">Login as Student</a>
-                                            <a class="dropdown-item" href="/parentLogin">Login as Parent</a>
-                                            <a class="dropdown-item" href="/teacherLogin">Login as Teacher</a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="userthumb">
                                     <img src="../img/core-img/guest.png" alt="">
                                 </div>
@@ -105,18 +95,56 @@
 
     @extends('layouts.app')
     @section('content')
+        @if($errors->any())
+            <h4>{{$errors->first()}}</h4>
+        @endif
+        <center>
         <h1>Create Notification</h1><hr>
         {!! Form::open(['action' => 'NotificationsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-            <div class="form-group">
+            <div class="form-group" style="width:1000px">
                 {{Form::label('teachername', 'Teacher Name')}}
                 {{Form::text('teachername', '', ['class' => 'form-control', 'placeholder' => 'Teacher Name'])}}
             </div>
-            <div class="form-group">
+            <div class="form-group" style="width:1000px">
                 {{Form::label('body', 'Body')}}
                 {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
             </div>
             {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
         {!! Form::close() !!}
+        <center>
+        <!-- ##### Footer Area Start ##### -->
+        <footer class="footer-area">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="/"><img src="img/core-img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Email:</span> admission@socoaching.com</a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
     @endsection
 
      <!-- ##### All Javascript Script ##### -->

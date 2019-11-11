@@ -36,6 +36,7 @@ class NotificationsController extends Controller
      */
     public function store(Request $request)
     {
+        if(auth()->user()->userType==0 || auth()->user()->userType==2){
         $this->validate($request, [
             'teachername' => 'required',
             'body' => 'required',
@@ -44,8 +45,14 @@ class NotificationsController extends Controller
         $notification = new Notification;
         $notification->TeacherName = $request->input('teachername');
         $notification->body = $request->input('body');
+        $notification->user_id = auth()->user()->id;
         $notification->save();
-        return redirect('/notifications')->with('success', 'Notification Created');
+        return redirect()->route('notifications.index')->withSuccess(['Created Successfully!!']);
+        
+        }
+        else{
+            return redirect('/notifications/create')->withErrors('msg', 'It looks like you dont have the authority to create notifications. Only teachers are allowed to do so.'); 
+        }
     }
 
     /**

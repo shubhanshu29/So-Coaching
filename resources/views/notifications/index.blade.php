@@ -79,14 +79,6 @@
 
                             <!-- Register / Login -->
                             <div class="login-state d-flex align-items-center">
-                                <div class="user-name mr-30">
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guest</a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/login">Login</a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="userthumb">
                                     <img src="img/core-img/guest.png" alt="">
                                 </div>
@@ -113,7 +105,8 @@
                             <div class="contact--info mt-50 mb-100">
                                 <h4>{{$notification->TeacherName}}</h4>
                                 <p>{{$notification->body}}</p>
-                                <p>Posted On:</p><small>{{$notification->created_at}}</small>    
+                                <p>Posted On:</p><small>{{$notification->created_at}}</small><br><br><br>
+                                <p>Posted By:</p><small>{{$notification->user_id}}</small>    
                             </div>
                         </div>
                     </div>
@@ -121,8 +114,44 @@
             @endforeach
         @else
             <p>No new Notifications</p>
-        @endif    
+        @endif 
+        <!-- ##### Footer Area Start ##### -->
+        <footer class="footer-area">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Email:</span> admission@socoaching.com</a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+   
     @endsection
+
+
 
      <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
