@@ -51,7 +51,7 @@ class NotificationsController extends Controller
         
         }
         else{
-            return redirect('/notifications/create')->withErrors('msg', 'It looks like you dont have the authority to create notifications. Only teachers are allowed to do so.'); 
+            return redirect()->route('notifications.create')->withError('Creation Failed');     
         }
     }
 
