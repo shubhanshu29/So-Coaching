@@ -24,13 +24,13 @@ Route::get('/MemberLogin', function () {
         return view('admin.home');
     }
     if(auth()->user()->userType==1){
-        return view('teacher.home');
+        return view('student.home');
     }
     if(auth()->user()->userType==2){
-        return view('parent.home');
+        return view('teacher.home');
     }
     if(auth()->user()->userType==3){
-        return view('student.home');
+        return view('parent.home');
     }
 });
 
