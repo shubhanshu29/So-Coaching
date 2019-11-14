@@ -47,7 +47,7 @@
                                 <li><a href="/attendance/create">Upload Attendance</a></li>
                                 <li><a href="/study/create">Study Material</a></li>
                                 <li><a href="/report">Student Report</a></li>
-                                <li><a href="/chats">Your messages</a></li>
+                                <li><a href="/#">Your messages</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -84,30 +84,28 @@
     <!-- ##### Header Area End ##### -->
     <hr>
 
-@extends('layouts.app')
+    @extends('layouts.app')
 
-@section('content')
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+    @section('content')
+        <center><h1>Chats</h1></center>
+        @if(count($chats) >= 1)
+            @foreach($chats as $chat)
+                <section class="contact-area">
+                    <div class="container">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact--info mt-50 mb-100">
+                                <h4>{{$chat->from_name}}</h4>
+                                <a href="/chats/{{$chat->from_user}}/view" class="btn btn-default">View Chat</a>
+                            </div>
                         </div>
-                    @endif
-
-                    You are logged in as teacher!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    </div>
+                </section>        
+            @endforeach
+        @else
+            <center>
+                <p>No new Chats for you!!</p>
+            </center>    
+        @endif 
         <br><br><hr>
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">

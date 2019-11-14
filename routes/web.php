@@ -38,6 +38,10 @@ Route::get('/addRelation', function () {
     return view('admin.addRelation');
 });
 
+Route::get('/chats','ChatsController@index');
+Route::get('/chats/{id}/view','ChatsController@view');
+
+
 Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');
 
