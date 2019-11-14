@@ -87,15 +87,14 @@
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Chats</h1></center>
+        <center><h1>Chats</h1>
         @if(count($chats) >= 1)
             @foreach($chats as $chat)
                 <section class="contact-area">
                     <div class="container">
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
-                                <h4>{{$chat->from_name}}</h4>
-                                <p>{{$chat->body}}</h4>
+                                <p align="left"><strong>{{$chat->from_name}} :  </strong>{{$chat->body}}</p>
                                 <small>{{$chat->created_at}}</small>
                             </div>
                         </div>
@@ -103,10 +102,16 @@
                 </section>        
             @endforeach
         @else
-            <center>
                 <strong>No Previous messages!! Start chat now by sending message.</strong>
-            </center>    
         @endif 
+        
+        {!! Form::open(['action' => 'NotificationsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+            <div class="form-group" style="width:500px">
+                {{Form::text('msgToSend', '', ['class' => 'form-control', 'placeholder' => 'Type Something'])}}
+            </div>
+            {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+        {!! Form::close() !!}
+        </center>
         <br><br><hr>
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">

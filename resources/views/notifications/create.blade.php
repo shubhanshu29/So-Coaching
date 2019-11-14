@@ -183,7 +183,7 @@
             </div>
             {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
         {!! Form::close() !!}
-        <center>
+        </center>
 @endguest
     <br><br>         
         <!-- ##### Footer Area Start ##### -->
