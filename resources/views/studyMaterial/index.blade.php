@@ -4,13 +4,13 @@
 <head>
 
     <!-- Title -->
-    <title>My Chats</title>
+    <title>Logged in as Teacher</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../../img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -87,30 +87,25 @@
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Chats</h1>
-        @if(count($chats) >= 1)
-            @foreach($chats as $chat)
+        <center><h1>Chats</h1></center>
+        @if(count($users) >= 1)
+            @foreach($users as $user)
                 <section class="contact-area">
                     <div class="container">
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
-                                <p align="left"><strong>{{$chat->from_name}} :  </strong>{{$chat->body}}</p>
-                                <small>{{$chat->created_at}}</small>
+                                <h4>{{$user->name}}</h4>
+                                <a href="/chats/{{$user->id}}/view" class="btn btn-default">View Chat</a>
                             </div>
                         </div>
                     </div>
                 </section>        
             @endforeach
         @else
-                <strong>No Previous messages!! Start chat now by sending message.</strong>
+            <center>
+                <p>No new Chats for you!!</p>
+            </center>    
         @endif 
-        {!! Form::open(['action' =>['ChatsController@store', $chat->to_user], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-            <div class="form-group" style="width:500px">
-                {{Form::text('msgToSend', '', ['class' => 'form-control', 'placeholder' => 'Type Something'])}}
-            </div>
-            {{Form::submit('Send', ['class'=>'btn btn-primary'])}}
-        {!! Form::close() !!}
-        </center>
         <br><br><hr>
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">

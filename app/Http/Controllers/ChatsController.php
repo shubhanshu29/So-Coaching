@@ -39,13 +39,11 @@ class ChatsController extends Controller
         ]);
         // chat create
         $chat = new Chat;
-        $name = DB::select('select name from users where id= :id',['id'=>$id]);
         $chat->to_user = $id;
         $chat->from_name = auth()->user()->name;
         $chat->body = $request->input('msgToSend');
         $chat->from_user = auth()->user()->id;
         $chat->save();
-        $chats = DB::select('select * from chats where to_user= :to_user and from_user= :from_user',['to_user'=>auth()->user()->id,'from_user'=>$id]);
-        return view('chats.view')->with('chats',$chats);               
+        return redirect('chats/{{$id}}/view');               
     }
 }
