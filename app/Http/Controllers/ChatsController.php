@@ -11,14 +11,41 @@ class ChatsController extends Controller
 {
     public function index()
     {
-        $chats=DB::select('select * FROM chats where to_user= :user',['user'=>auth()->user()->id]);
-        return view('chats.index')->with('chats',$chats);
+        if(auth()->user()->userType==2){
+            $users=DB::select('select * FROM users where userType=3');
+            return view('chats.index')->with('users',$users);
+        }
+        else if(auth()->user()->userType==3){
+            $users=DB::select('select * FROM users where userType=2');
+            return view('chats.index')->with('users',$users);
+        }
+        else{
+            return redirect('/login');
+        }
     }
     
 
     public function view($id)
     {
-        $chats = DB::select('select * from chats where to_user= :to_user and from_user= :from_user',['to_user'=>auth()->user()->id,'from_user'=>$id]);
+        $chats = DB::select('select * from chats where to_user= :to_user and from_user= :from_user or to_user= :to_user2 and from_user= :from_user2',['to_user'=>auth()->user()->id,'from_user'=>$id,'to_user2'=>$id,'from_user2'=>auth()->user()->id]);
         return view('chats.view')->with('chats', $chats);
+    }
+
+
+    public function store(Request $request,$id)
+    {
+        $this->validate($request, [
+            'msgToSend' => 'required',
+        ]);
+        // chat create
+        $chat = new Chat;
+        $name = DB::select('select name from users where id= :id',['id'=>$id]);
+        $chat->to_user = $id;
+        $chat->from_name = auth()->user()->name;
+        $chat->body = $request->input('msgToSend');
+        $chat->from_user = auth()->user()->id;
+        $chat->save();
+        $chats = DB::select('select * from chats where to_user= :to_user and from_user= :from_user',['to_user'=>auth()->user()->id,'from_user'=>$id]);
+        return view('chats.view')->with('chats',$chats);               
     }
 }

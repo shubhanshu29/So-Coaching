@@ -88,14 +88,14 @@
 
     @section('content')
         <center><h1>Chats</h1></center>
-        @if(count($chats) >= 1)
-            @foreach($chats as $chat)
+        @if(count($users) >= 1)
+            @foreach($users as $user)
                 <section class="contact-area">
                     <div class="container">
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
-                                <h4>{{$chat->from_name}}</h4>
-                                <a href="/chats/{{$chat->from_user}}/view" class="btn btn-default">View Chat</a>
+                                <h4>{{$user->name}}</h4>
+                                <a href="/chats/{{$user->id}}/view" class="btn btn-default">View Chat</a>
                             </div>
                         </div>
                     </div>

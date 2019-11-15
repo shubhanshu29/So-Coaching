@@ -40,6 +40,7 @@ Route::get('/addRelation', function () {
 
 Route::get('/chats','ChatsController@index');
 Route::get('/chats/{id}/view','ChatsController@view');
+Route::post('chats/{id}/view','ChatsController@store');
 
 
 Route::resource('relationships' , 'RelationshipsController');

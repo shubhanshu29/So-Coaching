@@ -105,7 +105,7 @@
                 <strong>No Previous messages!! Start chat now by sending message.</strong>
         @endif 
         
-        {!! Form::open(['action' => 'NotificationsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(['action' =>['ChatsController@store', $chat->from_user], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group" style="width:500px">
                 {{Form::text('msgToSend', '', ['class' => 'form-control', 'placeholder' => 'Type Something'])}}
             </div>
