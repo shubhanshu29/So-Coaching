@@ -4,7 +4,7 @@
 <head>
 
     <!-- Title -->
-    <title>Logged in as Teacher</title>
+    <title>Study Material: So-Coaching</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -39,7 +39,34 @@
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
+                    @guest
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
 
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="login-state d-flex align-items-center">
+                                <div class="user-name mr-30">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guest</a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
+                                            <a class="dropdown-item" href="/login">Login</a>
+                                        </div>
+                                    </div>
+                                </div>
+                   
+                @elseif(auth()->user()->userType==2)
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
@@ -69,6 +96,7 @@
                                         </div>
                                     </div>
                                 </div>
+                    @endguest
                                 <div class="userthumb">
                                     <img src="<?= asset('img/core-img/guest.png') ?>">
                                 </div>
@@ -87,25 +115,32 @@
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Chats</h1></center>
-        @if(count($users) >= 1)
-            @foreach($users as $user)
+        <center><h1>Study Material: So-Coaching</h1><br><br>
+        @if(count($materials) >= 1)
+            @foreach($materials as $material)
                 <section class="contact-area">
                     <div class="container">
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
-                                <h4>{{$user->name}}</h4>
-                                <a href="/chats/{{$user->id}}/view" class="btn btn-default">View Chat</a>
+                                <h4>Uploaded By:  {{$material->name}} </h4>
+                                <br><h4> Target Audience: {{$material->target}}</h4>
+                                <p>
+                                    <strong>Title:   </strong>{{$material->title}}<br>
+                                    <strong>URL:   </strong>{{$material->url}}<br>
+                                    <strong>Full File:   </strong>{{$material->attachment}}
+                                    <small>Uploaded On:   {{$material->created_at}}</small>
+                                    <small>Last Modified At:   {{$material->updated_at}}</small>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>        
             @endforeach
         @else
-            <center>
-                <p>No new Chats for you!!</p>
-            </center>    
-        @endif 
+                <p>No Study Material for you!! Ask your teacher to update new one</p>
+              
+        @endif
+        </center>   
         <br><br><hr>
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">

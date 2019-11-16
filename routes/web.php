@@ -42,6 +42,7 @@ Route::get('/chats','ChatsController@index');
 Route::get('/chats/{id}/view','ChatsController@view');
 Route::post('chats/{id}/view','ChatsController@store');
 
+Route::get('/studymaterial','studyMaterialsController@index');
 
 Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');
