@@ -44,6 +44,7 @@ Route::post('chats/{id}/view','ChatsController@store');
 
 Route::get('/studymaterial','studyMaterialsController@index');
 Route::get('/studymaterial/upload','studyMaterialsController@create');
+Route::post('studymaterial/upload','studyMaterialsController@store');
 
 Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');

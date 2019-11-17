@@ -29,25 +29,27 @@ class studyMaterialsController extends Controller
         // Handle File Upload
         if($request->hasFile('attachment')){
             // Get filename with the extension
-            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            $filenameWithExt = $request->file('attachment')->getClientOriginalName();
             // Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             // Get just ext
-            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            $extension = $request->file('attachment')->getClientOriginalExtension();
             // Filename to store
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             // Upload Image
-            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            $path = $request->file('attachment')->storeAs('public/SM', $fileNameToStore);
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
         // Create Post
-        $post = new Post;
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->user_id = auth()->user()->id;
-        $post->cover_image = $fileNameToStore;
-        $post->save();
-        return redirect('/posts')->with('success', 'Post Created');
+        $material = new StudyMaterial;
+        $material->title = $request->input('title');
+        $material->name = $request->input('name');
+        $material->body = $request->input('body');
+        $material->url = $request->input('url');
+        $material->target = $request->input('target');
+        $material->attachment = $fileNameToStore;
+        $material->save();
+        return redirect('/studymaterial')->with('success', 'Material added');
     }
 }
