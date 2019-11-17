@@ -667,33 +667,33 @@
                     <div class="col-12">
                         <div class="forms">
                             <h4>Check Scholarship Availability</h4>
-                            <form action="#" method="post">
+                            {!! Form::open(['action' => 'ScholarshipsController@store', 'method' => 'POST']) !!}
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="text" placeholder="Name">
+                                            {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => ' Name'])}}
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Email'])}}    
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="phone" placeholder="Phone">
+                                            {{Form::text('phone', '', ['class' => 'form-control', 'placeholder' => 'Mobile Number'])}}
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="site" placeholder="Marks in previous class exams">
+                                            {{Form::text('marks', '', ['class' => 'form-control', 'placeholder' => 'Marks in previous exams'])}}
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn clever-btn w-100">Check availability</button>
+                                        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
                                     </div>
                                 </div>
-                            </form>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>
