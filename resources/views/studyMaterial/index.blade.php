@@ -126,10 +126,10 @@
                                 <br><h4> Target Audience: {{$material->target}}</h4>
                                 <p>
                                     <strong>Title:   </strong>{{$material->title}}<br>
-                                    <strong>URL:   </strong>{{$material->url}}<br>
-                                    <strong>Full File:   </strong>{{$material->attachment}}
-                                    <small>Uploaded On:   {{$material->created_at}}</small>
-                                    <small>Last Modified At:   {{$material->updated_at}}</small>
+                                    <strong>URL:   </strong><a href="{{$material->url}}">{{$material->url}}</a>}<br>
+                                    <strong>Full File:   </strong><a href="\storage\SM\{{$material->attachment}}">{{$material->attachment}}</a><br>
+                                    <small>Uploaded On:   {{$material->created_at}}</small><br>
+                                    <small>Last Modified At:   {{$material->updated_at}}</small><br>
                                 </p>
                             </div>
                         </div>
