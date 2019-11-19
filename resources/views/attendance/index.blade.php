@@ -4,7 +4,7 @@
 <head>
 
     <!-- Title -->
-    <title>Logged in as Teacher</title>
+    <title>Attendance : So-COaching</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -87,7 +87,7 @@
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Chats</h1></center>
+        <center><h1>Your Batches</h1></center>
         @if(count($users) >= 1)
             @foreach($users as $user)
                 <section class="contact-area">
