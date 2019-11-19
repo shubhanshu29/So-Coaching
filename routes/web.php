@@ -50,6 +50,10 @@ Route::get('/scholarships','ScholarshipsController@index');
 Route::post('/scholarships','ScholarshipsController@store');
 
 
+Route::get('/attendance','AttendanceController@index');
+
+
+
 Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');
 
