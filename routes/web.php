@@ -52,6 +52,7 @@ Route::post('/scholarships','ScholarshipsController@store');
 
 Route::get('/attendance','AttendanceController@index');
 Route::get('/attendance/{id}/create','AttendanceController@create');
+Route::post('/attendance/{id}/create','AttendanceController@store');
 
 
 Route::resource('relationships' , 'RelationshipsController');

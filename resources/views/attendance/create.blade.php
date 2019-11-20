@@ -87,19 +87,23 @@
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Student List</h1></center>
+        <center><h1>Student List</h1>
         @if(count($users) >= 1)
                 <section class="contact-area">
                     <div class="container">
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
+                            {!! Form::open(['action' =>['AttendanceController@store', $id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}    
                                 @foreach($users as $user)
-                                    <p>{{$user->name}}  
-                                        var $id=user->id;
-                                        {{ Form::radio('$id', 'present' , true) }}
-                                        {{ Form::radio('$id', 'absent' , false) }}
+                                    <p>{{$user->name}}
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                                        <input type="radio" name="<?php echo $user->id; ?>"  id="1st-choice-q<?php echo $user->id; ?>" value="1" checked/>Present
+                                        <input type="radio" name="<?php echo $user->id; ?>"  id="1st-choice-q<?php echo $user->id; ?>; ?>" value="0" />Absent
                                     </p>
                                 @endforeach
+                                <br>
+                                {{Form::submit('Upload', ['class'=>'btn btn-primary'])}}
+                            {!! Form::close() !!}    
                             </div>
                         </div>
                     </div>
@@ -107,10 +111,10 @@
 
             
         @else
-            <center>
                 <p>No students found!!</p>
-            </center>    
-        @endif 
+               
+        @endif
+        </center> 
         <br><br><hr>
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">
