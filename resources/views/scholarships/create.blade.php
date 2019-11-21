@@ -42,7 +42,7 @@
                 <nav class="classy-navbar justify-content-between" id="cleverNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="img/core-img/logo.png" alt=""></a>
+                    <a class="nav-brand" href="/"><img src="../img/core-img/logo.png" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -81,14 +81,14 @@
                                 </div>
                             </div>
                             
-@elseif(auth()->user()->userType==0)
+@elseif(auth()->user()->userType==1)
 <div class="classynav">
                         
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
                                 <li><a href="/attendance">View Attendance</a></li>
-                                <li><a href="/studyMaterial">Study Material</a></li>
-                                <li><a href="/scholarship/create">Apply for Scholarships</a></li>
+                                <li><a href="/studymaterial">Study Material</a></li>
+                                <li><a href="/scholarships/create">Apply for Scholarships</a></li>
                                 
                             </ul>
 
@@ -133,7 +133,7 @@
                 <div class="card-header">{{ __('Apply for Scholarship') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="ScholarshipsController@create">
+                {!! Form::open(['action' => 'ScholarshipsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                         @csrf
 
                         <div class="form-group row">
@@ -171,17 +171,8 @@
 
                             </div>
                         </div>
-
-
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        <center>    {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}</center>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

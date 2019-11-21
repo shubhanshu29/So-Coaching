@@ -54,11 +54,12 @@ Route::post('/scholarships/create','ScholarshipsController@store');
 Route::get('/attendance','AttendanceController@index');
 Route::get('/attendance/{id}/create','AttendanceController@create');
 Route::post('/attendance/{id}/create','AttendanceController@store');
+Route::get('/attendance/{id}/view','AttendanceController@view');
 
 Route::get('/marks','MarksController@index');
 Route::get('/marks/{id}/create','MarksController@create');
 Route::post('/marks/{id}/create','MarksController@store');
-
+Route::get('/marks/{id}/view','MarksController@view');
 
 Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');

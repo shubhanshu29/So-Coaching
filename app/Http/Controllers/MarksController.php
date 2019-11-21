@@ -32,4 +32,10 @@ class MarksController extends Controller
         $marks->save();
         return redirect('/marks')->with('success', 'Request  added');
     }
+
+    public function view($id)
+    {
+        $users=DB::select('select * from marks');
+        return view('marks.view')->with(['users'=>$users,'id'=>$id]);
+    }
 }

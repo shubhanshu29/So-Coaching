@@ -34,4 +34,10 @@ class AttendanceController extends Controller
         return redirect('/attendance')->with('success', 'Request  added');
     }
 
+    public function view($id)
+    {
+        $users=DB::select('select * from attendances');
+        return view('attendance.view')->with(['users'=>$users,'id'=>$id]);
+    }
+
 }

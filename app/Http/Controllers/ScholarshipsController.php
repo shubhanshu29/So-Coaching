@@ -33,7 +33,7 @@ class ScholarshipsController extends Controller
         $scholarship->email = $request->input('email');
         $scholarship->marks = $request->input('marks');
         $scholarship->number = $request->input('number');
-        $material->save();
-        return redirect('/memberLogin')->with('success', 'Request  added');
+        $scholarship->save();
+        return redirect('/MemberLogin')->with('success', 'Request  added');
     }
 }
