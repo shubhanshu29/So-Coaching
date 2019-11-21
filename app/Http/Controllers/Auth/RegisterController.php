@@ -67,7 +67,11 @@ class RegisterController extends Controller
             Schema::table('attendances', function (Blueprint $table) {
                 $table->integer(User::max('id')+1)->default(-1);
             });
+            Schema::table('marks', function (Blueprint $table) {
+                $table->integer(User::max('id')+1)->default(NULL);
+            });
         }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
