@@ -54,6 +54,10 @@ Route::get('/attendance','AttendanceController@index');
 Route::get('/attendance/{id}/create','AttendanceController@create');
 Route::post('/attendance/{id}/create','AttendanceController@store');
 
+Route::get('/marks','MarksController@index');
+Route::get('/marks/{id}/create','MarksController@create');
+Route::post('/marks/{id}/create','MarksController@store');
+
 
 Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');
