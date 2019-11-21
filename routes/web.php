@@ -47,7 +47,8 @@ Route::get('/studymaterial/upload','studyMaterialsController@create');
 Route::post('studymaterial/upload','studyMaterialsController@store');
 
 Route::get('/scholarships','ScholarshipsController@index');
-Route::post('/scholarships','ScholarshipsController@store');
+Route::get('/scholarships/create','ScholarshipsController@create');
+Route::post('/scholarships/create','ScholarshipsController@store');
 
 
 Route::get('/attendance','AttendanceController@index');

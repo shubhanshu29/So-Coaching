@@ -573,33 +573,11 @@
                     <div class="col-12">
                         <div class="forms">
                             <h4>Check Scholarship Availability</h4>
-                            {!! Form::open(['action' => 'ScholarshipsController@store', 'method' => 'POST']) !!}
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => ' Name'])}}
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Email'])}}    
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            {{Form::text('phone', '', ['class' => 'form-control', 'placeholder' => 'Mobile Number'])}}
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="form-group">
-                                            {{Form::text('marks', '', ['class' => 'form-control', 'placeholder' => 'Marks in previous exams'])}}
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
-                                    </div>
-                                </div>
-                            {!! Form::close() !!}
+                            <p>We have a scholarship program for our astonishing students to help them reducing the financial burden on their parents such 
+                            that they can actively engage in studies. <br>
+                            Go to your profiles section(for already enrolled students) and then click on apply for scholarships to request for the scholarship.
+                            <br> We will notify you if you are eligible for it.</p>
+                                
                         </div>
                     </div>
                 </div>
