@@ -28,7 +28,7 @@ class ChatsController extends Controller
     public function view($id)
     {
         $chats = DB::select('select * from chats where to_user= :to_user and from_user= :from_user or to_user= :to_user2 and from_user= :from_user2',['to_user'=>auth()->user()->id,'from_user'=>$id,'to_user2'=>$id,'from_user2'=>auth()->user()->id]);
-        return view('chats.view')->with('chats', $chats);
+        return view('chats.view')->with(['chats'=> $chats,'id'=>$id]);
     }
 
 
@@ -44,6 +44,7 @@ class ChatsController extends Controller
         $chat->body = $request->input('msgToSend');
         $chat->from_user = auth()->user()->id;
         $chat->save();
-        return redirect('chats/{{$id}}/view');               
+        $chats = DB::select('select * from chats where to_user= :to_user and from_user= :from_user or to_user= :to_user2 and from_user= :from_user2',['to_user'=>auth()->user()->id,'from_user'=>$id,'to_user2'=>$id,'from_user2'=>auth()->user()->id]);
+        return view('chats.view')->with(['chats'=> $chats,'id'=>$id]);   
     }
 }

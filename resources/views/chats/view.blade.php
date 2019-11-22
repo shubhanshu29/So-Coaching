@@ -104,7 +104,7 @@
         @else
                 <strong>No Previous messages!! Start chat now by sending message.</strong>
         @endif 
-        {!! Form::open(['action' =>['ChatsController@store', $chat->to_user], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(['action' =>['ChatsController@store', $id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group" style="width:500px">
                 {{Form::text('msgToSend', '', ['class' => 'form-control', 'placeholder' => 'Type Something'])}}
             </div>
