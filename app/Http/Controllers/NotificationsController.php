@@ -97,6 +97,14 @@ class NotificationsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $notification = Notification::find($id);
+        
+        // Check for correct user
+        if(auth()->user()->id !==$notification->user_id){
+            return redirect('/notifications')->with('error', 'Unauthorized Page');
+        }
+        
+        $notification->delete();
+        return redirect('/notifications')->with('success', 'Post Removed');
     }
 }

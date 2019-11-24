@@ -93,6 +93,7 @@
     @section('content')
         <center><h1>Notifications</h1></center>
         @if(count($notifications) >= 1)
+            @guest
             @foreach($notifications as $notification)
                 <section class="contact-area">
                     <div class="container">
@@ -101,12 +102,49 @@
                                 <h4>{{$notification->TeacherName}}</h4>
                                 <p>{{$notification->body}}</p>
                                 <p>Posted On:</p><small>{{$notification->created_at}}</small><br><br><br>
-                                <p>Posted By:</p><small>{{$notification->user_id}}</small>    
                             </div>
                         </div>
                     </div>
                 </section>        
             @endforeach
+
+            @elseif(auth()->user()->userType==0 || auth()->user()->userType==2)
+            @foreach($notifications as $notification)
+                <section class="contact-area">
+                    <div class="container">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact--info mt-50 mb-100">
+                                <h4>{{$notification->TeacherName}}</h4>
+                                <p>{{$notification->body}}</p>
+                                <p>Posted On:</p><small>{{$notification->created_at}}</small><br><br><br>
+                                <p>Posted By:</p><small>{{$notification->user_id}}</small> 
+                                {!!Form::open(['action' => ['NotificationsController@destroy', $notification->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                {!!Form::close()!!}   
+                            </div>
+                        </div>
+                    </div>
+                </section>        
+            @endforeach
+
+
+            @else
+            @foreach($notifications as $notification)
+                <section class="contact-area">
+                    <div class="container">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact--info mt-50 mb-100">
+                                <h4>{{$notification->TeacherName}}</h4>
+                                <p>{{$notification->body}}</p>
+                                <p>Posted On:</p><small>{{$notification->created_at}}</small><br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </section>        
+            @endforeach
+
+            @endguest
         @else
             <p>No new Notifications</p>
         @endif 
