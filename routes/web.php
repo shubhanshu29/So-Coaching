@@ -60,7 +60,6 @@ Route::get('/marks/{id}/create','MarksController@create');
 Route::post('/marks/{id}/create','MarksController@store');
 Route::get('/marks/{id}/view','MarksController@view');
 
-Route::resource('relationships' , 'RelationshipsController');
 Route::resource('notifications' , 'NotificationsController');
 
 

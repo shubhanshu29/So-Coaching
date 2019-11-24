@@ -39,15 +39,15 @@
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
-
+@if(auth()->user()->userType==3)
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/attendance/create">Upload Attendance</a></li>
-                                <li><a href="/study/create">Study Material</a></li>
-                                <li><a href="/report">Student Report</a></li>
-                                <li><a href="/#">Your messages</a></li>
+                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
+                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
+                                <li><a href="/studymaterial">Study Material</a></li>
+                                <li><a href="/chats">Your Messages</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -62,15 +62,14 @@
                             <div class="login-state d-flex align-items-center">
                                 <div class="user-name mr-30">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teacher</a>
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parent-Notifications</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/marks/create">Upload marks</a>
-                                            <a class="dropdown-item" href="/notifications/create">Create Notifications</a>
+                                            <a class="dropdown-item" href="/notifications">View Notifications</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="userthumb">
-                                    <img src="<?= asset('img/core-img/guest.png') ?>">
+                                    <img src="<?= asset('../img/core-img/guest.png') ?>">
                                 </div>
                             </div>
 
@@ -83,6 +82,53 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <hr>
+
+  @elseif(auth()->user()->userType==1)
+  <div class="classynav">
+                            <ul>
+                                <li><a href="/MemberLogin">Home</a></li>
+                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
+                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
+                                <li><a href="/studymaterial">Study Material</a></li>
+                                <li><a href="/scholarships/create">Apply for scholarship</a></li>
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="login-state d-flex align-items-center">
+                                <div class="user-name mr-30">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student</a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
+                                            <a class="dropdown-item" href="/notifications">View Notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userthumb">
+                                    <img src="<?= asset('../img/core-img/guest.png') ?>">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <hr>
+  
+
+
+  @endif
 
     @extends('layouts.app')
 

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+@if(auth()->user()->userType==3)
 <hr>
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
@@ -25,7 +26,7 @@
                 <nav class="classy-navbar justify-content-between" id="cleverNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="img/core-img/logo.png" alt=""></a>
+                    <a class="nav-brand" href="/"><img src="../../img/core-img/logo.png" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -44,10 +45,10 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/attendance/create">Upload Attendance</a></li>
-                                <li><a href="/study/create">Study Material</a></li>
-                                <li><a href="/report">Student Report</a></li>
-                                <li><a href="/#">Your messages</a></li>
+                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
+                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
+                                <li><a href="/studymaterial">Study Material</a></li>
+                                <li><a href="/chats">Your Messages</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -62,9 +63,78 @@
                             <div class="login-state d-flex align-items-center">
                                 <div class="user-name mr-30">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teacher</a>
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parent-Notifications</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/marks/create">Upload marks</a>
+                                            <a class="dropdown-item" href="/notifications">View Notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userthumb">
+                                    <img src="<?= asset('../img/core-img/guest.png') ?>">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <hr>
+
+@elseif(auth()->user()->userType==2)
+<hr>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="clever-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="cleverNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img src="../../img/core-img/logo.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/MemberLogin">Home</a></li>
+                                <li><a href="/attendance">Upload Attendance</a></li>
+                                <li><a href="/marks">Upload Marks</a></li>
+                                <li><a href="/studymaterial/upload">Study Material</a></li>
+                                <li><a href="/chats">Chat with parents</a></li>
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="login-state d-flex align-items-center">
+                                <div class="user-name mr-30">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teacher-Notifications</a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
+                                            <a class="dropdown-item" href="/notifications">View Notifications</a>
                                             <a class="dropdown-item" href="/notifications/create">Create Notifications</a>
                                         </div>
                                     </div>
@@ -83,11 +153,11 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <hr>
-
+@endif
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Chats</h1>
+        <center><h1>Messages</h1>
         @if(count($chats) >= 1)
             @foreach($chats as $chat)
                 <section class="contact-area">
@@ -121,7 +191,7 @@
                     <div class="col-12">
                         <!-- Footer Logo -->
                         <div class="footer-logo">
-                            <a href="/"><img src="img/core-img/logo.png" alt=""></a>
+                            <a href="/"><img src="../../img/core-img/logo.png" alt=""></a>
                         </div>
                     </div>
                 </div>

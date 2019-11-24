@@ -19,26 +19,11 @@
 
 </head>
 
+
 <body>
+<hr>
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
-
-        <!-- Top Header Area -->
-        <div class="top-header-area d-flex justify-content-between align-items-center">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
-                <a href="#"><span>Email:</span> admissions@socoaching.com</a>
-            </div>
-            <!-- Follow Us -->
-            <div class="follow-us">
-                <span>Follow us</span>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-        </div>
-
         <!-- Navbar Area -->
         <div class="clever-main-menu">
             <div class="classy-nav-container breakpoint-off">
@@ -60,36 +45,15 @@
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
-@guest
+
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/contact">Contact</a></li>
-                            </ul>
-                            <!-- Search Button -->
-                            <div class="search-area">
-                                <form action="#" method="post">
-                                    <input type="search" name="search" id="search" placeholder="Search">
-                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-
-                            <!-- Register / Login -->
-                            <div class="login-state d-flex align-items-center">
-                                <div class="userthumb">
-                                    <img src="../img/core-img/guest.png" alt="">
-                                </div>
-                            </div>
-                            
-@elseif(auth()->user()->userType==0)
-<div class="classynav">
-                        
-                            <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/register">Register User</a></li>
-                                <li><a href="/contact">Create Relationships</a></li>
-                                
+                                <li><a href="/attendance">Upload Attendance</a></li>
+                                <li><a href="/marks">Upload Marks</a></li>
+                                <li><a href="/studymaterial/upload">Study Material</a></li>
+                                <li><a href="/chats">Chat with parents</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -104,17 +68,17 @@
                             <div class="login-state d-flex align-items-center">
                                 <div class="user-name mr-30">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin -Notifications</a>
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teacher-Notifications</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/login">My Notifications</a>
+                                            <a class="dropdown-item" href="/notifications">View Notifications</a>
                                             <a class="dropdown-item" href="/notifications/create">Create Notifications</a>
                                         </div>
                                     </div>
                                 </div>
-
-    
-@endguest
-
+                                <div class="userthumb">
+                                    <img src="<?= asset('img/core-img/guest.png') ?>">
+                                </div>
+                            </div>
 
                         </div>
                         <!-- Nav End -->
@@ -125,51 +89,8 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <hr>
-
     @extends('layouts.app')
     @section('content')
-    @guest
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Access  Denied</div>
-
-                <div class="card-body">
-                    It looks like you are not logged in to our website. <br>
-                    This feature can only be accessed by the admin and teachers.
-                    <br> <a href="/login">Click here to login</a>
-                    <br>OR<br>
-                    <a href="/">Go to Home Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@elseif (auth()->user()->userType==1 || auth()->user()->userType==3)
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Access  Denied</div>
-
-                <div class="card-body">
-                    It looks like you are not logged in to our website as admin or teacher<br>
-                    This feature can only be accessed by the Admin or the teacher.
-                    <br> <a href="/login">Click here to login</a>
-                    <br>OR<br>
-                    <a href="/memberLogin">Go to Home Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@else
-        @if($errors->any())
-            <h4>{{$errors->first()}}</h4>
-        @endif
         <center>
         <h1>Upload Study Material</h1><hr>
         {!! Form::open(['action' => 'studyMaterialsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
@@ -201,7 +122,6 @@
             {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
         {!! Form::close() !!}
         </center>
-@endguest
     <br><br>         
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">
@@ -212,7 +132,7 @@
                     <div class="col-12">
                         <!-- Footer Logo -->
                         <div class="footer-logo">
-                            <a href="/"><img src="img/core-img/logo.png" alt=""></a>
+                            <a href="/"><img src="../img/core-img/logo.png" alt=""></a>
                         </div>
                     </div>
                 </div>

@@ -9,13 +9,18 @@ class studyMaterialsController extends Controller
 {
     public function index()
     {
-        $materials=StudyMaterial::orderBy('updated_at','desc')->get();
-        return view('studyMaterial.index')->with('materials',$materials);
+        if(auth()->user()->userType==1 ||auth()->user()->userType==2 ||auth()->user()->userType==3){
+            $materials=StudyMaterial::orderBy('updated_at','desc')->get();
+            return view('studyMaterial.index')->with('materials',$materials);
+        }
+        else {
+            return view('error');
+        }
     }
 
     public function create()
     {
-        if(auth()->user()->userType==1){
+        if(auth()->user()->userType==2){
             return view('studyMaterial.create');
         } 
         else{
@@ -55,6 +60,6 @@ class studyMaterialsController extends Controller
         $material->target = $request->input('target');
         $material->attachment = $fileNameToStore;
         $material->save();
-        return redirect('/login')->with('success', 'Material added');
+        return redirect('/studymaterial')->with('success', 'Material added');
     }
 }

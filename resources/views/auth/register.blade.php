@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
-
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
 
@@ -42,7 +40,7 @@
                 <nav class="classy-navbar justify-content-between" id="cleverNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="/"><img src="img/core-img/logo.png" alt=""></a>
+                    <a class="nav-brand" href="/"><img src="../img/core-img/logo.png" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -56,39 +54,13 @@
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
-
                         <!-- Nav Start -->
-                        <div class="classynav">
-                        @guest
-                        <!-- Nav Start -->
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/contact">Contact</a></li>
-                            </ul>
-                            <!-- Search Button -->
-                            <div class="search-area">
-                                <form action="#" method="post">
-                                    <input type="search" name="search" id="search" placeholder="Search">
-                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-
-                            <!-- Register / Login -->
-                            <div class="login-state d-flex align-items-center">
-                                <div class="userthumb">
-                                    <img src="../img/core-img/guest.png" alt="">
-                                </div>
-                            </div>
-                            
-@elseif(auth()->user()->userType==0)
-<div class="classynav">
-                        
+                        <div class="classynav">                        
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
                                 <li><a href="/register">Register User</a></li>
-                                <li><a href="/contact">Create Relationships</a></li>
-                                
+                                <li><a href="/relationships">Create Relationships</a></li>
+                                <li><a href="/scholarships">Scholarship Requests</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -105,12 +77,17 @@
                                     <div class="dropdown">
                                         <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin -Notifications</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/login">My Notifications</a>
+                                            <a class="dropdown-item" href="/notifications">My Notifications</a>
                                             <a class="dropdown-item" href="/notifications/create">Create Notifications</a>
                                         </div>
                                     </div>
-                                </div>    
-@endguest
+                                </div>
+                                 <!-- Register / Login -->
+                            <div class="login-state d-flex align-items-center">
+                                <div class="userthumb">
+                                    <img src="<?= asset('img/core-img/guest.png') ?>">
+                                </div>
+                            </div>
                         </div>
                         <!-- Nav End -->
                     </div>
@@ -120,50 +97,10 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <hr>
-
 @extends('layouts.app')
 
 @section('content')
 
-@guest
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Access  Denied</div>
-
-                <div class="card-body">
-                    It looks like you are not logged in to our website. <br>
-                    This feature can only be accessed by the Admin.
-                    <br> <a href="/login">Click here to login</a>
-                    <br>OR<br>
-                    <a href="/">Go to Home Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@elseif (auth()->user()->userType!=0)
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Access  Denied</div>
-
-                <div class="card-body">
-                    It looks like you are not logged in to our website as admin<br>
-                    This feature can only be accessed by the Admin.
-                    <br> <a href="/login">Click here to login</a>
-                    <br>OR<br>
-                    <a href="/memberLogin">Go to Home Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@else
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -233,20 +170,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="batch3" class="col-md-4 col-form-label text-md-right">{{ __('Batch 3') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="batch3" type="text" class="form-control @error('batch3') is-invalid @enderror" name="batch3" value="{{ old('batch3') }}" required autocomplete="batch3" autofocus>
-
-                                @error('batch3')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="batch2" class="col-md-4 col-form-label text-md-right">{{ __('Batch 2') }}</label>
 
                             <div class="col-md-6">
@@ -295,8 +218,6 @@
         </div>
     </div>
 </div>
-@endguest
-
 
 <br><br><hr>
         <!-- ##### Footer Area Start ##### -->

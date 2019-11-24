@@ -79,7 +79,6 @@ class RegisterController extends Controller
             'userType' => $data['userType'],
             'batch1' => $data['batch1'],
             'batch2' => $data['batch2'],
-            'batch3' => $data['batch3'],
         ]);
     }
 }

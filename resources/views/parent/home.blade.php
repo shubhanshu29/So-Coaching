@@ -47,7 +47,7 @@
                                 <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
                                 <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
                                 <li><a href="/studymaterial">Study Material</a></li>
-                                <li><a href="/scholarships/create">Apply for scholarship</a></li>
+                                <li><a href="/chats">Your Messages</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -62,7 +62,7 @@
                             <div class="login-state d-flex align-items-center">
                                 <div class="user-name mr-30">
                                     <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student</a>
+                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parent-Notifications</a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
                                             <a class="dropdown-item" href="/notifications">View Notifications</a>
                                         </div>
