@@ -87,7 +87,9 @@
     @extends('layouts.app')
 
     @section('content')
-        <center><h1>Your Marks(Test Wise)</h1>
+        <center>
+        @if(auth()->user()->userType==1)
+        <h1>Your Marks(Test Wise)</h1>
                 <section class="contact-area">
                     <div class="container">
                         <div class="col-12 col-lg-6">
@@ -109,7 +111,32 @@
                         </div>
                     </div>
                 </section>
+        
+        @elseif(auth()->user()->userType==3)
+        <h1>Your Ward's Marks(Test Wise)</h1>
+                <section class="contact-area">
+                    <div class="container">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact--info mt-50 mb-100">    
+                                @foreach($users as $user)
+                                    <p>
+                                        
+                                        @if($user->$stuID != NULL)                   
+                                          
+                                            <p><strong>Marks:</strong>{{$user->$stuID}}
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <small><strong>Test on</strong>:{{$user->created_at}}</small></p>
 
+                                        @endif
+                                        <br><br>    
+                                    </p>
+                                @endforeach
+                                <br>   
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        @endif
         </center> 
         <br><br><hr>
         <!-- ##### Footer Area Start ##### -->

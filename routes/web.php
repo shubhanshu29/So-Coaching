@@ -34,9 +34,8 @@ Route::get('/MemberLogin', function () {
     }
 });
 
-Route::get('/addRelation', function () {
-    return view('admin.addRelation');
-});
+Route::get('/relationships','RelationshipsController@index');
+Route::post('/relationships','RelationshipsController@store');
 
 Route::get('/chats','ChatsController@index');
 Route::get('/chats/{id}/view','ChatsController@view');

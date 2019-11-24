@@ -9,13 +9,23 @@ class ScholarshipsController extends Controller
 {
     public function index()
     {
-        $scholarships=Scholarship::orderBy('marks','desc')->get();
-        return view('scholarships.index')->with('scholarships',$scholarships);
+        if(auth()->user()->userType==0){
+            $scholarships=Scholarship::orderBy('marks','desc')->get();
+            return view('scholarships.index')->with('scholarships',$scholarships);
+        }
+        else{
+            return view('error');
+        }
     }
 
     public function create()
     {
-        return view('scholarships.create');
+        if(auth()->user()->userType==1){
+            return view('scholarships.create');
+        }
+        else{
+            return view('error');
+        }
     }
 
     public function store(Request $request)

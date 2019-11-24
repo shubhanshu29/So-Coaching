@@ -25,7 +25,12 @@ class NotificationsController extends Controller
      */
     public function create()
     {
-        return view('notifications.create');
+        if(auth()->user()->userType==0 || auth()->user()->userType==2){
+            return view('notifications.create');
+        }
+        else{
+            return view('error');
+        }
     }
 
     /**

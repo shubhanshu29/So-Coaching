@@ -15,7 +15,12 @@ class studyMaterialsController extends Controller
 
     public function create()
     {
-        return view('studyMaterial.create');
+        if(auth()->user()->userType==1){
+            return view('studyMaterial.create');
+        } 
+        else{
+            return view('error');
+        }   
     }
 
     public function store(Request $request)
@@ -50,6 +55,6 @@ class studyMaterialsController extends Controller
         $material->target = $request->input('target');
         $material->attachment = $fileNameToStore;
         $material->save();
-        return redirect('/studymaterial')->with('success', 'Material added');
+        return redirect('/login')->with('success', 'Material added');
     }
 }

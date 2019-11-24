@@ -4,7 +4,7 @@
 <head>
 
     <!-- Title -->
-    <title>Logged in as Parent</title>
+    <title>Notifications| So-Coaching</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -15,9 +15,26 @@
 </head>
 
 <body>
-<hr>
+
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Email:</span> admissions@socoaching.com</a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
         <!-- Navbar Area -->
         <div class="clever-main-menu">
             <div class="classy-nav-container breakpoint-off">
@@ -43,11 +60,8 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
-                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
-                                <li><a href="/studymaterial">Study Material</a></li>
-                                <li><a href="/scholarships/create">Apply for scholarship</a></li>
+                                <li><a href="/login">Home</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
 
                             <!-- Search Button -->
@@ -60,16 +74,8 @@
 
                             <!-- Register / Login -->
                             <div class="login-state d-flex align-items-center">
-                                <div class="user-name mr-30">
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle" href="#" role="button" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student</a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                            <a class="dropdown-item" href="/notifications">View Notifications</a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="userthumb">
-                                    <img src="<?= asset('../img/core-img/guest.png') ?>">
+                                    <img src="img/core-img/guest.png" alt="">
                                 </div>
                             </div>
 
@@ -82,32 +88,19 @@
     </header>
     <!-- ##### Header Area End ##### -->
     <hr>
+    @extends('layouts.app')
 
-@extends('layouts.app')
-
-@section('content')
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+    @section('content')
+        <center><h1>Error Page URL</h1></center>
+                <section class="contact-area">
+                    <div class="container">
+                        <div class="col-12 col-lg-6">
+                            <div class="contact--info mt-50 mb-100">
+                                <h4>The page you requested cannot be displayed.<br> This may be because you don't have access to this page.</h4> 
+                            </div>
                         </div>
-                    @endif
-
-                    You are logged in as a parent!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-        <br><br><hr>
+                    </div>
+                </section>        
         <!-- ##### Footer Area Start ##### -->
         <footer class="footer-area">
         <!-- Top Footer Area -->
@@ -117,7 +110,7 @@
                     <div class="col-12">
                         <!-- Footer Logo -->
                         <div class="footer-logo">
-                            <a href="/"><img src="img/core-img/logo.png" alt=""></a>
+                            <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -141,4 +134,16 @@
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
-@endsection
+   
+    @endsection
+
+
+
+     <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+</body>
+
+</html>
