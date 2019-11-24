@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    <meta http-equiv="refresh" content="5" > 
     <!-- Title -->
     <title>My Chats</title>
 
@@ -11,7 +11,39 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../../style.css">
+    
+<style>
+.container1 {
+  border: 2px solid #dedede;
+  background-color: skyblue;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 1000px;
+}
 
+.darker {
+  border-color: #ccc;
+  background-color: white;
+}
+
+.container1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+</style>
 </head>
 
 <body>
@@ -160,20 +192,21 @@
         <center><h1>Messages</h1>
         @if(count($chats) >= 1)
             @foreach($chats as $chat)
-                <section class="contact-area">
-                    <div class="container">
-                        <div class="col-12 col-lg-6">
-                            <div class="contact--info mt-50 mb-100">
-                                <p align="left"><strong>{{$chat->from_name}} :  </strong>{{$chat->body}}</p>
-                                <small>{{$chat->created_at}}</small>
-                            </div>
-                        </div>
-                    </div>
-                </section>        
+                @if($chat->from_name==auth()->user()->name)
+                <div class="container1">
+                    <p><strong>{{$chat->from_name}}</strong>{{$chat->body}}</p>
+                    <span class="time-right">{{$chat->created_at}}</span>
+                @else
+                <div class="container1 darker">
+                    <p><strong>{{$chat->from_name}}</strong>{{$chat->body}}</p>
+                    <span class="time-left">{{$chat->created_at}}</span>    
+                @endif    
+                </div>        
             @endforeach
         @else
                 <strong>No Previous messages!! Start chat now by sending message.</strong>
         @endif 
+        <br><br>
         {!! Form::open(['action' =>['ChatsController@store', $id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group" style="width:500px">
                 {{Form::text('msgToSend', '', ['class' => 'form-control', 'placeholder' => 'Type Something'])}}
