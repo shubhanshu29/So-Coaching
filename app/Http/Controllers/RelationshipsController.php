@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Relationship;
+use App\Models\Relationship;
 
 class RelationshipsController extends Controller
 {
-    
+    //
     public function index(){
         if(auth()->user()->userType==0){
             return view('admin.addRelation');
@@ -29,7 +29,6 @@ class RelationshipsController extends Controller
         $relationship->parent_id = $request->input('parent_id');
         $relationship->student_id = $request->input('student_id');
         $relationship->save();
-        return view('/login')->withSuccess(['Created Successfully!!']);            
+        return redirect()->back()->with(['message','Relation Created Successfully!!']);            
     }
-
 }

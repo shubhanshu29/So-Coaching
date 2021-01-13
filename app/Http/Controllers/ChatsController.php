@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Chat;
-use App\User;
-use DB;
+use App\Models\Chat;
+use App\Model\User;
+use Illuminate\Support\Facades\DB;
 
 class ChatsController extends Controller
 {
+    //
     public function index()
     {
         if(auth()->user()->userType==2){
@@ -23,7 +24,6 @@ class ChatsController extends Controller
             return view('error');
         }
     }
-    
 
     public function view($id)
     {

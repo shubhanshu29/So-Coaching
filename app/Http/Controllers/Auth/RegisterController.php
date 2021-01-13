@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use DB;
-use App\Attendance;
+//use App\Attendance;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use App\Http\Controllers\Controller;
@@ -61,17 +61,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
-        $user=User::max('id');
-        $user++;
-        if($data['userType']==1){
-            Schema::table('attendances', function (Blueprint $table) {
-                $table->integer(User::max('id')+1)->default(-1);
-            });
-            Schema::table('marks', function (Blueprint $table) {
-                $table->integer(User::max('id')+1)->default(NULL);
-            });
-        }
-
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

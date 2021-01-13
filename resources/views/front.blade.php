@@ -31,7 +31,7 @@
         <div class="top-header-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 9999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->
@@ -589,7 +589,7 @@
             <h3>Register Now</h3>
             <p>For registration purposes the child should come in person with his/her ward to the admission office. For contact information check contact section above. Hurry Now, Time remaining for scholarship availing is.</p>
             <div class="register-countdown">
-                <div class="events-cd d-flex flex-wrap" data-countdown="2019/11/01"></div>
+                <div class="events-cd d-flex flex-wrap" data-countdown="2021/11/01"></div>
             </div>
         </div>
     </section>
@@ -669,7 +669,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 9999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

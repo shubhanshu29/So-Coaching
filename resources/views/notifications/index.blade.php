@@ -23,7 +23,7 @@
         <div class="top-header-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 9999999999</a>
                 <a href="#"><span>Email:</span> admissions@socoaching.com</a>
             </div>
             <!-- Follow Us -->
@@ -118,10 +118,7 @@
                                 <p>{{$notification->body}}</p>
                                 <p>Posted On:</p><small>{{$notification->created_at}}</small><br><br><br>
                                 <p>Posted By:</p><small>{{$notification->user_id}}</small> 
-                                {!!Form::open(['action' => ['NotificationsController@destroy', $notification->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                                    {{Form::hidden('_method', 'DELETE')}}
-                                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-                                {!!Form::close()!!}   
+                                
                             </div>
                         </div>
                     </div>
@@ -168,7 +165,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 99999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

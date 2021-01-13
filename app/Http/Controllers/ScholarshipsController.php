@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Scholarship;
+use App\Models\Scholarship;
 
 class ScholarshipsController extends Controller
 {
+    //
     public function index()
     {
         if(auth()->user()->userType==0){

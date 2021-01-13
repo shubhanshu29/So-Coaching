@@ -140,9 +140,9 @@
                             <div class="contact--info mt-50 mb-100">    
                                 @foreach($users as $user)
                                     <p>
-                                        @if($user->$id != NULL)                   
+                                        @if($user->marks != NULL)                   
                                           
-                                            <p><strong>Marks:</strong>{{$user->$id}}
+                                            <p><strong>Marks:</strong>{{$user->marks}}
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <small><strong>Test on</strong>:{{$user->created_at}}</small></p>
 
@@ -165,9 +165,9 @@
                                 @foreach($users as $user)
                                     <p>
                                         
-                                        @if($user->$stuID != NULL)                   
+                                        @if($user->marks!= NULL)                   
                                           
-                                            <p><strong>Marks:</strong>{{$user->$stuID}}
+                                            <p><strong>Marks:</strong>{{$user->marks}}
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <small><strong>Test on</strong>:{{$user->created_at}}</small></p>
 
@@ -203,7 +203,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

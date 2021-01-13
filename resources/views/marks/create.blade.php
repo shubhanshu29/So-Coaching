@@ -94,7 +94,7 @@
                     <div class="container">
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
-                            {!! Form::open(['action' =>['MarksController@store', $id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}    
+                            {!! Form::open(array('url' => array('marks/create', $id), 'method' => 'post', 'enctype' => 'multipart/form-data')) !!}    
                                 @foreach($users as $user)
                                     <p>{{$user->name}}
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
@@ -136,7 +136,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

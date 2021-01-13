@@ -44,8 +44,8 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
-                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
+                                <li><a href="/attendance/view/{{auth()->user()->id}}">View Attendance</a></li>
+                                <li><a href="/marks/view/{{auth()->user()->id}}">View Marks</a></li>
                                 <li><a href="/studymaterial">Study Material</a></li>
                                 <li><a href="/chats">Your Messages</a></li>
                             </ul>
@@ -128,7 +128,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 9999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

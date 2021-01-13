@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\StudyMaterial;
+use App\Models\StudyMaterial;
+
 
 class studyMaterialsController extends Controller
 {
+    //
     public function index()
     {
         if(auth()->user()->userType==1 ||auth()->user()->userType==2 ||auth()->user()->userType==3){

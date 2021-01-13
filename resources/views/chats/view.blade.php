@@ -207,7 +207,7 @@
                 <strong>No Previous messages!! Start chat now by sending message.</strong>
         @endif 
         <br><br>
-        {!! Form::open(['action' =>['ChatsController@store', $id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(array('url' => array('chats/view', $id), 'method' => 'post', 'enctype' => 'multipart/form-data')) !!}
             <div class="form-group" style="width:500px">
                 {{Form::text('msgToSend', '', ['class' => 'form-control', 'placeholder' => 'Type Something'])}}
             </div>
@@ -235,7 +235,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 99999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

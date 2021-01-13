@@ -95,7 +95,7 @@
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
                                 <h4>{{$user->batch1}}</h4>
-                                <a href="/marks/{{$user->batch1}}/create" class="btn btn-default">Upload Marks</a>
+                                <a href="/marks/create/{{$user->batch1}}" class="btn btn-default">Upload Marks</a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
                                 <h4>{{$user->batch2}}</h4>
-                                <a href="/marks/{{$user->batch2}}/create" class="btn btn-default">Upload Marks</a>
+                                <a href="/marks/create/{{$user->batch2}}" class="btn btn-default">Upload Marks</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

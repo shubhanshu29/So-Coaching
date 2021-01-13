@@ -166,7 +166,7 @@
                         <div class="col-12 col-lg-6">
                             <div class="contact--info mt-50 mb-100">
                                 <h4>{{$user->name}}</h4>
-                                <a href="/chats/{{$user->id}}/view" class="btn btn-default">View Chat</a>
+                                <a href="/chats/view/{{$user->id}}" class="btn btn-default">View Chat</a>
                             </div>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

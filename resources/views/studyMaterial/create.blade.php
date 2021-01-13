@@ -87,13 +87,14 @@
             </div>
         </div>
     </header>
+
     <!-- ##### Header Area End ##### -->
     <hr>
     @extends('layouts.app')
     @section('content')
         <center>
         <h1>Upload Study Material</h1><hr>
-        {!! Form::open(['action' => 'studyMaterialsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(array('url' => 'studymaterial/upload', 'method' => 'POST', 'enctype' => 'multipart/form-data')) !!}
             <div class="form-group" style="width:1000px">
                 {{Form::label('name', 'Teacher Name')}}
                 {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Teacher Name'])}}
@@ -143,7 +144,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

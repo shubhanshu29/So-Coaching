@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('front');
 });
+
 Route::get('/contact', function () {
-    return view('contact');
- 
+    return view('contact'); 
 });
 
 Route::get('/MemberLogin', function () {
@@ -34,35 +34,53 @@ Route::get('/MemberLogin', function () {
     }
 });
 
-Route::get('/relationships','RelationshipsController@index');
-Route::post('/relationships','RelationshipsController@store');
-
-Route::get('/chats','ChatsController@index');
-Route::get('/chats/{id}/view','ChatsController@view');
-Route::post('/chats/{id}/view','ChatsController@store');
-
-Route::get('/studymaterial','studyMaterialsController@index');
-Route::get('/studymaterial/upload','studyMaterialsController@create');
-Route::post('studymaterial/upload','studyMaterialsController@store');
-
-Route::get('/scholarships','ScholarshipsController@index');
-Route::get('/scholarships/create','ScholarshipsController@create');
-Route::post('/scholarships/create','ScholarshipsController@store');
+Route::get('notifications', 'App\Http\Controllers\NotificationsController@index');
+Route::get('notifications/create', 'App\Http\Controllers\NotificationsController@create');
+Route::post('notifications/create', 'App\Http\Controllers\NotificationsController@store');
+Route::delete('notifications/destroy/{id}', 'App\Http\Controllers\NotificationsController@destroy');
 
 
-Route::get('/attendance','AttendanceController@index');
-Route::get('/attendance/{id}/create','AttendanceController@create');
-Route::post('/attendance/{id}/create','AttendanceController@store');
-Route::get('/attendance/{id}/view','AttendanceController@view');
+Route::get('/chats','App\Http\Controllers\ChatsController@index');
+Route::get('/chats/view/{id}','App\Http\Controllers\ChatsController@view');
+Route::post('/chats/view/{id}','App\Http\Controllers\ChatsController@store');
 
-Route::get('/marks','MarksController@index');
-Route::get('/marks/{id}/create','MarksController@create');
-Route::post('/marks/{id}/create','MarksController@store');
-Route::get('/marks/{id}/view','MarksController@view');
+Route::get('/scholarships','App\Http\Controllers\ScholarshipsController@index');
+Route::get('/scholarships/create','App\Http\Controllers\ScholarshipsController@create');
+Route::post('/scholarships/create','App\Http\Controllers\ScholarshipsController@store');
 
-Route::resource('notifications' , 'NotificationsController');
+
+Route::get('/relationships','App\Http\Controllers\RelationshipsController@index');
+Route::post('/relationships','App\Http\Controllers\RelationshipsController@store');
+
+
+Route::get('/studymaterial','App\Http\Controllers\studyMaterialsController@index');
+Route::get('/studymaterial/upload','App\Http\Controllers\studyMaterialsController@create');
+Route::post('studymaterial/upload','App\Http\Controllers\studyMaterialsController@store');
+
+
+Route::get('/attendance','App\Http\Controllers\AttendancesController@index');
+Route::get('/attendance/create/{id}','App\Http\Controllers\AttendancesController@create');
+Route::post('/attendance/create/{id}','App\Http\Controllers\AttendancesController@store');
+Route::get('/attendance/view/{id}','App\Http\Controllers\AttendancesController@view');
+
+
+Route::get('/marks','App\Http\Controllers\MarksController@index');
+Route::get('/marks/create/{id}','App\Http\Controllers\MarksController@create');
+Route::post('/marks/create/{id}','App\Http\Controllers\MarksController@store');
+Route::get('/marks/view/{id}','App\Http\Controllers\MarksController@view');
+
+
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

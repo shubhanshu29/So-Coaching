@@ -27,7 +27,7 @@
         <div class="top-header-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admissions@socoaching.com</a>
             </div>
             <!-- Follow Us -->
@@ -107,8 +107,13 @@
     @extends('layouts.app')
     @section('content')
         <center>
+        @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
         <h1>Create Relationship</h1><hr>
-        {!! Form::open(['action' => 'RelationshipsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::open(array('url' => 'relationships', 'method' => 'POST', 'enctype' => 'multipart/form-data')) !!}
             <div class="form-group" style="width:1000px">
                 {{Form::label('parent_id', 'Parent User ID:')}}
                 {{Form::text('parent_id', '', ['class' => 'form-control', 'placeholder' => 'Parent User ID'])}}
@@ -141,7 +146,7 @@
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
             <!-- Contact Info -->
             <div class="contact-info">
-                <a href="#"><span>Phone:</span> +91 8433466260</a>
+                <a href="#"><span>Phone:</span> +91 999999999</a>
                 <a href="#"><span>Email:</span> admission@socoaching.com</a>
             </div>
             <!-- Follow Us -->

@@ -4,7 +4,7 @@
 <head>
 
     <!-- Title -->
-    <title>Notifications| So-Coaching</title>
+    <title>Error| So-Coaching</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
