@@ -44,8 +44,8 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
-                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
+                                <li><a href="/attendance/view/{{auth()->user()->id}}">View Attendance</a></li>
+                                <li><a href="/marks/view/{{auth()->user()->id}}">View Marks</a></li>
                                 <li><a href="/studymaterial">Study Material</a></li>
                                 <li><a href="/scholarships/create">Apply for scholarship</a></li>
                             </ul>
@@ -105,8 +105,8 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="/MemberLogin">Home</a></li>
-                                <li><a href="/attendance/{{auth()->user()->id}}/view">View Attendance</a></li>
-                                <li><a href="/marks/{{auth()->user()->id}}/view">View Marks</a></li>
+                                <li><a href="/attendance/view/{{auth()->user()->id}}">View Attendance</a></li>
+                                <li><a href="/marks/view/{{auth()->user()->id}}">View Marks</a></li>
                                 <li><a href="/studymaterial">Study Material</a></li>
                                 <li><a href="/chats">Your Messages</a></li>
                             </ul>
