@@ -69,7 +69,7 @@ Route::get('/marks/create/{id}','App\Http\Controllers\MarksController@create');
 Route::post('/marks/create/{id}','App\Http\Controllers\MarksController@store');
 Route::get('/marks/view/{id}','App\Http\Controllers\MarksController@view');
 
-
+Route::get('/dashboard','App\Http\Controllers\HomeController@index');
 
 
 
@@ -77,10 +77,3 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
